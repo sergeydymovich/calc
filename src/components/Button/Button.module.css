@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  color: #ededee;
+  font-size: 30px;
+  background-color: #7d7b80;
+}
+
+.dark {
+  background-color: #636168;
+}
+
+.orange {
+  background-color: #fe9f0b;
+}

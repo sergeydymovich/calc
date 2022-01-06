@@ -1,0 +1,73 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  height: 400px;
+  margin: 50px auto 0 auto;
+  border: 1px solid #0a0a0a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.display {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+  padding: 15px 20px;
+  background-color: #525057;
+  color: #ededee;
+}
+
+.result {
+  font-size: 45px;
+  line-height: 50px;
+  font-weight: lighter;
+}
+
+.expression {
+  font-size: 15px;
+}
+
+.btnsContainer {
+  display: flex;
+  flex: 1;
+}
+
+.mainBtns {
+  flex: 3;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+.operatorBtns {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  flex: 1;
+  border-right: 1px solid #525057;
+  border-bottom: 1px solid #525057;
+}
+
+.mainBtns .button {
+  flex: none;
+  width: calc(100% / 3);
+}
+
+.button:first-child,
+.button:last-child {
+  width: 100%;
+}
+
+.button:last-child {
+  border-bottom: none;
+}
+
+.operatorBtns .button {
+  border-right: none;
+}
