@@ -77,8 +77,6 @@ const App = () => {
     }
   };
 
-  console.log(firstOperand, secondOperand);
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.display}>
