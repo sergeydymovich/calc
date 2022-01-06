@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "../Button/Button";
+import { sliceNumber } from "../../utils/string.utils.js";
 import styles from "./App.module.css";
 
 const OPERATORS = {
@@ -76,15 +77,15 @@ const App = () => {
     }
   };
 
+  console.log(firstOperand, secondOperand);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.display}>
         <p className={styles.expression}>{`${
-          total !== undefined && operator ? total : ""
+          total !== undefined && operator ? sliceNumber(total) : ""
         } ${operator}`}</p>
-        <p className={styles.result}>
-          {resultToDisplay?.toString().substring(0, 11) || 0}
-        </p>
+        <p className={styles.result}>{sliceNumber(resultToDisplay)}</p>
       </div>
       <div className={styles.btnsContainer}>
         <div className={styles.mainBtns}>
@@ -100,11 +101,7 @@ const App = () => {
                   key={value}
                   className={styles.button}
                   onClick={() => handleClickNumber(value)}
-                  disabled={
-                    firstOperand?.toString().length > 8 ||
-                    secondOperand?.toString().length > 8 ||
-                    (value === "0" && operator === OPERATORS.div)
-                  }
+                  disabled={value === "0" && operator === OPERATORS.div}
                 >
                   {value}
                 </Button>
