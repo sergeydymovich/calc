@@ -16,3 +16,7 @@
 .orange {
   background-color: #fe9f0b;
 }
+
+.container:hover {
+  opacity: 0.9;
+}
