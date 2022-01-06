@@ -23,13 +23,13 @@ const App = () => {
 
   const handleClickNumber = (number) => {
     if (operator) {
-      setSecondOperand((prev) => +((prev || 0) + number));
+      setSecondOperand((prev) => +sliceNumber(+((prev || 0) + number), 10));
     } else {
       if (total) {
         setFirstOperand();
         setTotal();
       }
-      setFirstOperand((prev) => +((prev || 0) + number));
+      setFirstOperand((prev) => +sliceNumber(+((prev || 0) + number), 10));
     }
   };
 
